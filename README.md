@@ -1,9 +1,7 @@
 # springboot3-dromara
-基于springboot3.2.0和jdk21搭建，整合[dromara](https://dromara.org/zh)开源组织的开源框架DEMO ，特此记录
+基于springboot3.2.0和jdk21搭建，整合[dromara](https://dromara.org/zh)开源组织的开源框架DEMO ，项目配置使用nacos，resource下留存一份模版
 
-应用列表：
-
-
+### 应用列表：
 
 ### x-file-storage:
 

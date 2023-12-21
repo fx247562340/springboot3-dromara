@@ -8,8 +8,8 @@
     <artifactId>springboot3-dromara</artifactId>
     <version>1.0.0</version>
     <modules>
-
         <module>x-file-storage</module>
+        <module>easy-es</module>
     </modules>
     <packaging>pom</packaging>
 

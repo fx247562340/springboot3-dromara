@@ -1,0 +1,1087 @@
+2023-12-22 14:42:06,575 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 14:42:07,747 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 14:42:07,806 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 14:42:07,811 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 14:42:08,331 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 14:42:08,659 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 14:42:08,666 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 14:42:08,668 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 14:42:08,668 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 14:42:08,712 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 14:42:08,713 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 891 ms
+2023-12-22 14:42:09,023 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 14:42:09,024 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 14:42:09,157 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 14:42:09,157 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 14:42:09,198 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 14:42:09,472 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 14:42:09,520 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 14:42:09,529 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 14:42:09,769 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 14:42:09,780 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.775 seconds (process running for 5.005)
+2023-12-22 14:42:09,790 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 14:42:09,790 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 14:42:46,417 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 14:42:46,418 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 14:42:46,419 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 1 ms
+2023-12-22 14:42:46,512 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"size":10000,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"track_total_hits":2147483647}
+2023-12-22 15:09:14,441 [File Watcher] INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] LocalDevToolsAutoConfiguration.java:211 - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-12-22 15:09:14,445 [Thread-16] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Stopping ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:09:14,454 [Thread-16] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:09:14,483 [Thread-16] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:09:14,489 [Thread-16] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2023-12-22 15:09:14,490 [Thread-16] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-22 15:09:14,715 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:09:14,758 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:09:14,760 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:09:14,951 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=c47008e0-b39a-3e5d-9b85-22b4b1711712
+2023-12-22 15:09:14,995 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:09:14,995 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:09:14,995 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:09:14,995 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:09:15,014 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:09:15,014 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 250 ms
+2023-12-22 15:09:15,030 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:09:15,030 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:09:15,132 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:09:15,132 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:09:15,238 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:09:15,265 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:09:15,268 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:09:15,489 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:09:15,495 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 0.954 seconds (process running for 1630.72)
+2023-12-22 15:09:15,495 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:09:15,496 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:09:15,497 [restartedMain] INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] ConditionEvaluationDeltaLoggingListener.java:63 - Condition evaluation unchanged
+2023-12-22 15:11:07,166 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:11:07,196 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:11:11,535 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:11:12,574 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:11:12,627 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:11:12,632 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:11:13,078 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:11:13,383 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:11:13,389 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:11:13,391 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:11:13,391 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:11:13,431 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:11:13,431 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 787 ms
+2023-12-22 15:11:13,729 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:11:13,731 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:11:13,870 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:11:13,870 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:11:13,906 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:11:14,178 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:11:14,229 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:11:14,240 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:11:14,492 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:11:14,508 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.51 seconds (process running for 4.225)
+2023-12-22 15:11:14,531 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:11:14,532 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:11:19,591 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:11:19,591 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:11:19,593 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 1 ms
+2023-12-22 15:11:19,710 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"from":0,"size":10,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"sort":[{"timeLocal":{"order":"desc"}}],"track_total_hits":2147483647}
+2023-12-22 15:11:21,197 [http-nio-8001-exec-1] ERROR [o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]] DirectJDKLog.java:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.reflect.UndeclaredThrowableException] with root cause
+org.elasticsearch.ElasticsearchException: Elasticsearch exception [type=illegal_argument_exception, reason=Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [timeLocal] in order to load field data by uninverting the inverted index. Note that this can use significant memory.]
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:491)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.failureFromXContent(ElasticsearchException.java:598)
+	at org.elasticsearch.rest.BytesRestResponse.errorFromXContent(BytesRestResponse.java:170)
+	at org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:2484)
+	at org.elasticsearch.client.RestHighLevelClient.parseResponseException(RestHighLevelClient.java:2461)
+	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:2184)
+	at org.elasticsearch.client.RestHighLevelClient.performRequest(RestHighLevelClient.java:2137)
+	at org.elasticsearch.client.RestHighLevelClient.performRequestAndParseEntity(RestHighLevelClient.java:2105)
+	at org.elasticsearch.client.RestHighLevelClient.search(RestHighLevelClient.java:1367)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:873)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.search(BaseEsMapperImpl.java:204)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:1151)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.pageQuery(BaseEsMapperImpl.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.dromara.easyes.core.proxy.EsMapperProxy.invoke(EsMapperProxy.java:28)
+	at jdk.proxy3/jdk.proxy3.$Proxy70.pageQuery(Unknown Source)
+	at com.xingod.controller.LogController.list(LogController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2023-12-22 15:14:13,341 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:14:13,370 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:14:17,010 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:14:18,074 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:14:18,135 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:14:18,140 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:14:18,772 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:14:19,099 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:14:19,113 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:14:19,115 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:14:19,115 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:14:19,160 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:14:19,161 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 1008 ms
+2023-12-22 15:14:19,509 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:14:19,509 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:14:19,639 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:14:19,640 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:14:19,681 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:14:19,934 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:14:19,982 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:14:19,992 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:14:20,225 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:14:20,235 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.8 seconds (process running for 4.459)
+2023-12-22 15:14:20,243 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:14:20,244 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:14:21,354 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:14:21,354 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:14:21,354 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 0 ms
+2023-12-22 15:14:21,455 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"from":0,"size":10,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"sort":[{"timeLocal":{"order":"desc"}}],"track_total_hits":2147483647}
+2023-12-22 15:14:24,496 [http-nio-8001-exec-1] ERROR [o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]] DirectJDKLog.java:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.reflect.UndeclaredThrowableException] with root cause
+org.elasticsearch.ElasticsearchException: Elasticsearch exception [type=illegal_argument_exception, reason=Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [timeLocal] in order to load field data by uninverting the inverted index. Note that this can use significant memory.]
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:491)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.failureFromXContent(ElasticsearchException.java:598)
+	at org.elasticsearch.rest.BytesRestResponse.errorFromXContent(BytesRestResponse.java:170)
+	at org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:2484)
+	at org.elasticsearch.client.RestHighLevelClient.parseResponseException(RestHighLevelClient.java:2461)
+	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:2184)
+	at org.elasticsearch.client.RestHighLevelClient.performRequest(RestHighLevelClient.java:2137)
+	at org.elasticsearch.client.RestHighLevelClient.performRequestAndParseEntity(RestHighLevelClient.java:2105)
+	at org.elasticsearch.client.RestHighLevelClient.search(RestHighLevelClient.java:1367)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:873)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.search(BaseEsMapperImpl.java:204)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:1151)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.pageQuery(BaseEsMapperImpl.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.dromara.easyes.core.proxy.EsMapperProxy.invoke(EsMapperProxy.java:28)
+	at jdk.proxy3/jdk.proxy3.$Proxy71.pageQuery(Unknown Source)
+	at com.xingod.controller.LogController.list(LogController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2023-12-22 15:14:37,506 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:14:37,535 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:14:40,862 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:14:41,870 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:14:41,915 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:14:41,919 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:14:42,405 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:14:42,698 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:14:42,705 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:14:42,706 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:14:42,708 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:14:42,745 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:14:42,745 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 815 ms
+2023-12-22 15:14:43,033 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:14:43,033 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:14:43,177 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:14:43,179 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:14:43,220 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:14:43,495 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:14:43,543 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:14:43,553 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:14:43,806 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:14:43,817 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.463 seconds (process running for 4.097)
+2023-12-22 15:14:43,826 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:14:43,826 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:14:45,314 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:14:45,314 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:14:45,316 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 2 ms
+2023-12-22 15:14:45,433 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"from":0,"size":10,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"sort":[{"timeLocal":{"order":"desc"}}],"track_total_hits":2147483647}
+2023-12-22 15:14:45,533 [http-nio-8001-exec-1] ERROR [o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]] DirectJDKLog.java:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.reflect.UndeclaredThrowableException] with root cause
+org.elasticsearch.ElasticsearchException: Elasticsearch exception [type=illegal_argument_exception, reason=Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [timeLocal] in order to load field data by uninverting the inverted index. Note that this can use significant memory.]
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:491)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.failureFromXContent(ElasticsearchException.java:598)
+	at org.elasticsearch.rest.BytesRestResponse.errorFromXContent(BytesRestResponse.java:170)
+	at org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:2484)
+	at org.elasticsearch.client.RestHighLevelClient.parseResponseException(RestHighLevelClient.java:2461)
+	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:2184)
+	at org.elasticsearch.client.RestHighLevelClient.performRequest(RestHighLevelClient.java:2137)
+	at org.elasticsearch.client.RestHighLevelClient.performRequestAndParseEntity(RestHighLevelClient.java:2105)
+	at org.elasticsearch.client.RestHighLevelClient.search(RestHighLevelClient.java:1367)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:873)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.search(BaseEsMapperImpl.java:204)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:1151)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.pageQuery(BaseEsMapperImpl.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.dromara.easyes.core.proxy.EsMapperProxy.invoke(EsMapperProxy.java:28)
+	at jdk.proxy3/jdk.proxy3.$Proxy71.pageQuery(Unknown Source)
+	at com.xingod.controller.LogController.list(LogController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2023-12-22 15:17:27,701 [File Watcher] INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] LocalDevToolsAutoConfiguration.java:211 - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-12-22 15:17:27,706 [Thread-16] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Stopping ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:17:27,715 [Thread-16] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:17:27,743 [Thread-16] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:17:27,752 [Thread-16] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2023-12-22 15:17:27,753 [Thread-16] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-22 15:17:27,993 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:17:28,033 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:17:28,036 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:17:28,243 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:17:28,290 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:17:28,290 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:17:28,291 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:17:28,291 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:17:28,306 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:17:28,306 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 265 ms
+2023-12-22 15:17:28,322 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:17:28,323 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:17:28,413 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:17:28,413 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:17:28,421 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:17:28,530 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:17:28,563 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:17:28,565 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:17:28,783 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:17:28,790 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 0.988 seconds (process running for 169.07)
+2023-12-22 15:17:28,791 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:17:28,791 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:17:28,793 [restartedMain] INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] ConditionEvaluationDeltaLoggingListener.java:63 - Condition evaluation unchanged
+2023-12-22 15:17:29,955 [File Watcher] INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] LocalDevToolsAutoConfiguration.java:211 - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-12-22 15:17:29,956 [Thread-36] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Stopping ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:17:29,961 [Thread-36] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:17:29,989 [Thread-36] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:17:30,313 [Thread-36] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2023-12-22 15:17:30,520 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:17:30,561 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:17:30,565 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:17:30,733 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:17:30,768 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:17:30,768 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:17:30,768 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:17:30,768 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:17:30,782 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:17:30,782 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 214 ms
+2023-12-22 15:17:30,797 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:17:30,798 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:17:30,892 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:17:30,893 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:17:30,898 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:17:30,969 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:17:30,998 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:17:31,001 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:17:31,223 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:17:31,228 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 0.849 seconds (process running for 171.508)
+2023-12-22 15:17:31,228 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:17:31,230 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:17:31,230 [restartedMain] INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] ConditionEvaluationDeltaLoggingListener.java:63 - Condition evaluation unchanged
+2023-12-22 15:19:36,734 [File Watcher] INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] LocalDevToolsAutoConfiguration.java:211 - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-12-22 15:19:36,735 [Thread-47] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Stopping ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:19:36,741 [Thread-47] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:19:36,769 [Thread-47] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:19:36,772 [Thread-47] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2023-12-22 15:19:36,992 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:19:37,025 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:19:37,028 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:19:37,214 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:19:37,248 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:19:37,249 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:19:37,249 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:19:37,249 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:19:37,266 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:19:37,266 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 235 ms
+2023-12-22 15:19:37,291 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:19:37,291 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:19:37,385 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:19:37,385 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:19:37,393 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:19:37,480 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:19:37,508 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:19:37,512 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:19:37,735 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:19:37,742 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 0.902 seconds (process running for 298.023)
+2023-12-22 15:19:37,743 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:19:37,745 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:19:37,745 [restartedMain] INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] ConditionEvaluationDeltaLoggingListener.java:63 - Condition evaluation unchanged
+2023-12-22 15:19:38,899 [File Watcher] INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] LocalDevToolsAutoConfiguration.java:211 - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-12-22 15:19:38,900 [Thread-58] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Stopping ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:19:38,905 [Thread-58] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:19:38,932 [Thread-58] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:19:39,254 [Thread-58] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2023-12-22 15:19:39,437 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:19:39,472 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:19:39,474 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:19:39,611 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:19:39,640 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:19:39,640 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:19:39,641 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:19:39,641 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:19:39,652 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:19:39,652 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 176 ms
+2023-12-22 15:19:39,662 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:19:39,662 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:19:39,749 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:19:39,749 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:19:39,755 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:19:39,810 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:19:39,829 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:19:39,831 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:19:40,052 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:19:40,058 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 0.743 seconds (process running for 300.338)
+2023-12-22 15:19:40,059 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:19:40,059 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:19:40,059 [restartedMain] INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] ConditionEvaluationDeltaLoggingListener.java:63 - Condition evaluation unchanged
+2023-12-22 15:19:40,063 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:19:40,092 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:20:20,146 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:20:21,129 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:20:21,174 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:20:21,178 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:20:21,651 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:20:21,944 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:20:21,951 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:20:21,952 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:20:21,952 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:20:21,987 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:20:21,987 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 797 ms
+2023-12-22 15:20:22,352 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:20:22,353 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:20:22,502 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:20:22,502 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:20:22,562 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:20:22,880 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:20:22,933 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:20:22,944 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:20:23,192 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:20:23,204 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.571 seconds (process running for 4.232)
+2023-12-22 15:20:23,216 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:20:23,217 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:20:24,290 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:20:24,290 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:20:24,290 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 0 ms
+2023-12-22 15:20:24,390 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"from":0,"size":10,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"sort":[{"timeLocal":{"order":"desc"}}],"track_total_hits":2147483647}
+2023-12-22 15:20:26,614 [http-nio-8001-exec-1] ERROR [o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]] DirectJDKLog.java:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.reflect.UndeclaredThrowableException] with root cause
+org.elasticsearch.ElasticsearchException: Elasticsearch exception [type=illegal_argument_exception, reason=Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [timeLocal] in order to load field data by uninverting the inverted index. Note that this can use significant memory.]
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:491)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.failureFromXContent(ElasticsearchException.java:598)
+	at org.elasticsearch.rest.BytesRestResponse.errorFromXContent(BytesRestResponse.java:170)
+	at org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:2484)
+	at org.elasticsearch.client.RestHighLevelClient.parseResponseException(RestHighLevelClient.java:2461)
+	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:2184)
+	at org.elasticsearch.client.RestHighLevelClient.performRequest(RestHighLevelClient.java:2137)
+	at org.elasticsearch.client.RestHighLevelClient.performRequestAndParseEntity(RestHighLevelClient.java:2105)
+	at org.elasticsearch.client.RestHighLevelClient.search(RestHighLevelClient.java:1367)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:873)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.search(BaseEsMapperImpl.java:204)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:1151)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.pageQuery(BaseEsMapperImpl.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.dromara.easyes.core.proxy.EsMapperProxy.invoke(EsMapperProxy.java:28)
+	at jdk.proxy3/jdk.proxy3.$Proxy71.pageQuery(Unknown Source)
+	at com.xingod.controller.LogController.list(LogController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2023-12-22 15:20:59,838 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:20:59,865 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:21:02,564 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:21:03,548 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:21:03,586 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:21:03,591 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:21:04,086 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:21:04,388 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:21:04,396 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:21:04,397 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:21:04,397 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:21:04,431 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:21:04,431 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 828 ms
+2023-12-22 15:21:04,785 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:21:04,786 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:21:04,931 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:21:04,931 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:21:04,976 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:21:05,296 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:21:05,347 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:21:05,357 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:21:05,607 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:21:05,618 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.59 seconds (process running for 4.239)
+2023-12-22 15:21:05,627 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:21:05,628 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:21:06,399 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:21:06,399 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:21:06,400 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 1 ms
+2023-12-22 15:21:06,504 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"from":0,"size":10,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"sort":[{"timeLocal":{"order":"desc"}}],"track_total_hits":2147483647}
+2023-12-22 15:21:06,601 [http-nio-8001-exec-1] ERROR [o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]] DirectJDKLog.java:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.reflect.UndeclaredThrowableException] with root cause
+org.elasticsearch.ElasticsearchException: Elasticsearch exception [type=illegal_argument_exception, reason=Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [timeLocal] in order to load field data by uninverting the inverted index. Note that this can use significant memory.]
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:491)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.failureFromXContent(ElasticsearchException.java:598)
+	at org.elasticsearch.rest.BytesRestResponse.errorFromXContent(BytesRestResponse.java:170)
+	at org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:2484)
+	at org.elasticsearch.client.RestHighLevelClient.parseResponseException(RestHighLevelClient.java:2461)
+	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:2184)
+	at org.elasticsearch.client.RestHighLevelClient.performRequest(RestHighLevelClient.java:2137)
+	at org.elasticsearch.client.RestHighLevelClient.performRequestAndParseEntity(RestHighLevelClient.java:2105)
+	at org.elasticsearch.client.RestHighLevelClient.search(RestHighLevelClient.java:1367)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:873)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.search(BaseEsMapperImpl.java:204)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:1151)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.pageQuery(BaseEsMapperImpl.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.dromara.easyes.core.proxy.EsMapperProxy.invoke(EsMapperProxy.java:28)
+	at jdk.proxy3/jdk.proxy3.$Proxy71.pageQuery(Unknown Source)
+	at com.xingod.controller.LogController.list(LogController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2023-12-22 15:23:29,991 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:23:30,019 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:23:33,618 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:23:34,607 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:23:34,654 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:23:34,659 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:23:35,121 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:23:35,396 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:23:35,403 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:23:35,405 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:23:35,405 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:23:35,439 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:23:35,439 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 768 ms
+2023-12-22 15:23:35,728 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:23:35,728 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:23:35,876 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:23:35,876 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:23:35,917 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:23:36,179 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:23:36,223 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:23:36,234 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:23:36,474 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:23:36,484 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.392 seconds (process running for 4.05)
+2023-12-22 15:23:36,493 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:23:36,494 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:25:01,251 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:25:01,251 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:25:01,252 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 1 ms
+2023-12-22 15:25:01,351 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"from":0,"size":10,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"sort":[{"timeLocal":{"order":"desc"}}],"track_total_hits":2147483647}
+2023-12-22 15:25:02,195 [http-nio-8001-exec-1] ERROR [o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]] DirectJDKLog.java:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.reflect.UndeclaredThrowableException] with root cause
+org.elasticsearch.ElasticsearchException: Elasticsearch exception [type=illegal_argument_exception, reason=Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [timeLocal] in order to load field data by uninverting the inverted index. Note that this can use significant memory.]
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:491)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.failureFromXContent(ElasticsearchException.java:598)
+	at org.elasticsearch.rest.BytesRestResponse.errorFromXContent(BytesRestResponse.java:170)
+	at org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:2484)
+	at org.elasticsearch.client.RestHighLevelClient.parseResponseException(RestHighLevelClient.java:2461)
+	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:2184)
+	at org.elasticsearch.client.RestHighLevelClient.performRequest(RestHighLevelClient.java:2137)
+	at org.elasticsearch.client.RestHighLevelClient.performRequestAndParseEntity(RestHighLevelClient.java:2105)
+	at org.elasticsearch.client.RestHighLevelClient.search(RestHighLevelClient.java:1367)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:873)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.search(BaseEsMapperImpl.java:204)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:1151)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.pageQuery(BaseEsMapperImpl.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.dromara.easyes.core.proxy.EsMapperProxy.invoke(EsMapperProxy.java:28)
+	at jdk.proxy3/jdk.proxy3.$Proxy71.pageQuery(Unknown Source)
+	at com.xingod.controller.LogController.list(LogController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2023-12-22 15:29:15,791 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:29:15,819 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:29:19,681 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:29:20,894 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:29:20,935 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:29:20,940 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:29:21,391 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:29:21,682 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:29:21,689 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:29:21,690 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:29:21,690 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:29:21,724 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:29:21,725 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 774 ms
+2023-12-22 15:29:22,011 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:29:22,012 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:29:22,149 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:29:22,149 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:29:22,191 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:29:22,491 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:29:22,544 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:29:22,554 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:29:22,800 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:29:22,811 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.735 seconds (process running for 4.48)
+2023-12-22 15:29:22,821 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:29:22,821 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:43:42,575 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:43:42,576 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:43:42,577 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 1 ms
+2023-12-22 15:43:42,680 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"from":0,"size":10,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"sort":[{"timeLocal":{"order":"desc"}}],"track_total_hits":2147483647}
+2023-12-22 15:43:46,870 [http-nio-8001-exec-1] ERROR [o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]] DirectJDKLog.java:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.reflect.UndeclaredThrowableException] with root cause
+org.elasticsearch.ElasticsearchException: Elasticsearch exception [type=illegal_argument_exception, reason=Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [timeLocal] in order to load field data by uninverting the inverted index. Note that this can use significant memory.]
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:491)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.fromXContent(ElasticsearchException.java:402)
+	at org.elasticsearch.ElasticsearchException.innerFromXContent(ElasticsearchException.java:432)
+	at org.elasticsearch.ElasticsearchException.failureFromXContent(ElasticsearchException.java:598)
+	at org.elasticsearch.rest.BytesRestResponse.errorFromXContent(BytesRestResponse.java:170)
+	at org.elasticsearch.client.RestHighLevelClient.parseEntity(RestHighLevelClient.java:2484)
+	at org.elasticsearch.client.RestHighLevelClient.parseResponseException(RestHighLevelClient.java:2461)
+	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:2184)
+	at org.elasticsearch.client.RestHighLevelClient.performRequest(RestHighLevelClient.java:2137)
+	at org.elasticsearch.client.RestHighLevelClient.performRequestAndParseEntity(RestHighLevelClient.java:2105)
+	at org.elasticsearch.client.RestHighLevelClient.search(RestHighLevelClient.java:1367)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:873)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.search(BaseEsMapperImpl.java:204)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.getSearchResponse(BaseEsMapperImpl.java:1151)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.pageQuery(BaseEsMapperImpl.java:250)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.dromara.easyes.core.proxy.EsMapperProxy.invoke(EsMapperProxy.java:28)
+	at jdk.proxy3/jdk.proxy3.$Proxy70.pageQuery(Unknown Source)
+	at com.xingod.controller.LogController.list(LogController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2023-12-22 15:49:38,040 [File Watcher] INFO  [o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] LocalDevToolsAutoConfiguration.java:211 - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-12-22 15:49:38,045 [Thread-16] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Stopping ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:49:38,051 [Thread-16] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:49:38,078 [Thread-16] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:49:38,084 [Thread-16] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2023-12-22 15:49:38,086 [Thread-16] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-22 15:49:38,355 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:49:38,402 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:49:38,404 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:49:38,578 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=c47008e0-b39a-3e5d-9b85-22b4b1711712
+2023-12-22 15:49:38,615 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:49:38,615 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:49:38,617 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:49:38,617 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:49:38,628 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:49:38,628 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 221 ms
+2023-12-22 15:49:38,639 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:49:38,640 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:49:38,728 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:49:38,729 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:49:38,815 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:49:38,840 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:49:38,842 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:49:39,058 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:49:39,065 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 0.878 seconds (process running for 1220.733)
+2023-12-22 15:49:39,066 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:49:39,066 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:49:39,067 [restartedMain] INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] ConditionEvaluationDeltaLoggingListener.java:63 - Condition evaluation unchanged
+2023-12-22 15:49:50,871 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:49:50,908 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:53:24,280 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:53:25,396 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:53:25,441 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:53:25,446 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:53:25,974 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:53:26,350 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:53:26,359 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:53:26,361 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:53:26,362 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:53:26,416 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:53:26,416 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 957 ms
+2023-12-22 15:53:26,832 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:53:26,832 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:53:26,972 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:53:26,973 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:53:27,023 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:53:27,439 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:53:27,513 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:53:27,526 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:53:27,840 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:53:27,853 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 4.136 seconds (process running for 4.766)
+2023-12-22 15:53:27,864 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:53:27,865 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:53:28,699 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:53:28,699 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:53:28,700 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 1 ms
+2023-12-22 15:53:28,828 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"from":0,"size":10,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"sort":[{"timeLocal.keyword":{"order":"desc"}}],"track_total_hits":2147483647}
+2023-12-22 15:54:18,185 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:54:18,213 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:54:22,858 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:54:23,882 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:54:23,924 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:54:23,929 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:54:24,365 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:54:24,669 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:54:24,676 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:54:24,677 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:54:24,677 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:54:24,715 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:54:24,715 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 774 ms
+2023-12-22 15:54:25,007 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:54:25,007 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:54:25,146 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:54:25,146 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:54:25,188 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:54:25,466 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:54:25,517 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:54:25,528 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:54:25,785 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:54:25,797 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.478 seconds (process running for 4.157)
+2023-12-22 15:54:25,807 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:54:25,807 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:54:27,668 [http-nio-8001-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 15:54:27,668 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:532 - Initializing Servlet 'dispatcherServlet'
+2023-12-22 15:54:27,670 [http-nio-8001-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:554 - Completed initialization in 1 ms
+2023-12-22 15:54:27,769 [http-nio-8001-exec-1] INFO  [easy-es] LogUtils.java:30 - ===> Execute By Easy-Es: 
+index-name: shenyu-access-logging
+DSL：{"from":0,"size":10,"query":{"bool":{"must":[{"match":{"status":{"query":200,"operator":"OR","prefix_length":0,"max_expansions":50,"fuzzy_transpositions":true,"lenient":false,"zero_terms_query":"NONE","auto_generate_synonyms_phrase_query":true,"boost":1.0}}}],"adjust_pure_negative":true,"boost":1.0}},"sort":[{"timeLocal.keyword":{"order":"desc"}}],"track_total_hits":2147483647}
+2023-12-22 15:54:28,335 [http-nio-8001-exec-1] ERROR [o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]] DirectJDKLog.java:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.reflect.UndeclaredThrowableException] with root cause
+com.alibaba.fastjson.JSONException: syntax error, expect {, actual string, pos 967, line 1, column 968{"clientIp":"10.244.2.0","timeLocal":"2023-12-22 15:54:17.991","method":"/membercenter-api/assInfoRestService/queryAssInfo","requestHeader":"{\"content-length\":\"161\",\"Accept\":\"*/*\",\"X-Request-ID\":\"976ebea15efc5191426d0f4a78ea440a\",\"X-Original-Forwarded-For\":\"47.94.175.50\",\"User-Agent\":\"okhttp/3.14.9\",\"X-B3-ParentSpanId\":\"abd570f8784fb4ea\",\"X-Forwarded-Proto\":\"http\",\"X-Forwarded-Host\":\"t-eop.hevision.com\",\"Host\":\"t-eop.hevision.com\",\"Accept-Encoding\":\"gzip\",\"X-Forwarded-Port\":\"80\",\"Authorization\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IjIwMjMxMTI5MDA4NzQ3IiwiZXhwIjoxNzAzMjM0NDAwLCJpYXQiOjE3MDMyMTI4MDB9.c7cN1JRWnE-ehrjQgYX_30oBNxKCX2ZnxdfLGfPPjj0\",\"X-B3-SpanId\":\"5c1da3f838e056e1\",\"X-B3-Sampled\":\"0\",\"X-Forwarded-For\":\"10.244.2.0\",\"X-B3-TraceId\":\"7a79aaaec6ece1a6\",\"X-Forwarded-Scheme\":\"http\",\"X-Real-IP\":\"10.244.2.0\",\"Content-Type\":\"application/json\",\"X-Scheme\":\"http\"}","responseHeader":"{\"content-length\":\"137\",\"transfer-encoding\":\"chunked\",\"Connection\":\"close\",\"Date\":\"Fri, 22 Dec 2023 07:54:18 GMT\",\"Content-Type\":\"application/json\"}","requestBody":"{\"head\":{\"contractId\":\"YS20231222446031360\",\"appKey\":\"YS\",\"appSecret\":\"interface\",\"reqTime\":\"2023-12-22 15:54:17\",\"workNo\":\"\"},\"assInfo\":{\"phone\":\"17610529292\"}}","requestUri":"http://t-eop.hevision.com/membercenter-api/assInfoRestService/queryAssInfo","responseBody":"{\"list\":[],\"head\":{\"contractId\":\"YS20231222446031360\",\"resTime\":\"2023-12-22 15:54:18\",\"resType\":\"0\",\"resCode\":\"0000\",\"resDesc\":\"成功\"}}","responseContentLength":137,"rpcType":"springCloud","status":200,"upstreamIp":"","upstreamResponseTime":31,"userAgent":"okhttp/3.14.9","host":"t-eop.hevision.com","module":"/membercenter-api","path":"/membercenter-api/assInfoRestService/queryAssInfo","appId":"20231129008747"}
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:205)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:1149)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:1154)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:23)
+	at com.alibaba.fastjson.parser.deserializer.ContextObjectDeserializer.deserialze(ContextObjectDeserializer.java:9)
+	at com.alibaba.fastjson.parser.deserializer.DefaultFieldDeserializer.parseField(DefaultFieldDeserializer.java:88)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.parseField(JavaBeanDeserializer.java:1278)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:893)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.parseRest(JavaBeanDeserializer.java:1624)
+	at com.alibaba.fastjson.parser.deserializer.FastjsonASMDeserializer_1_ShenyuAccessLogging.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:287)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:705)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:394)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:303)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.parseOne(BaseEsMapperImpl.java:1054)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.lambda$pageQuery$4(BaseEsMapperImpl.java:255)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.dromara.easyes.core.core.BaseEsMapperImpl.pageQuery(BaseEsMapperImpl.java:256)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.dromara.easyes.core.proxy.EsMapperProxy.invoke(EsMapperProxy.java:28)
+	at jdk.proxy3/jdk.proxy3.$Proxy71.pageQuery(Unknown Source)
+	at com.xingod.controller.LogController.list(LogController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2023-12-22 15:56:31,086 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:56:31,114 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.
+2023-12-22 15:56:34,605 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 15:56:35,599 [restartedMain] WARN  [c.a.cloud.nacos.client.NacosPropertySourceBuilder] NacosPropertySourceBuilder.java:87 - Ignore the empty nacos configuration and get it based on dataId[easy-es] & group[DEFAULT_GROUP]
+2023-12-22 15:56:35,653 [restartedMain] INFO  [o.s.c.b.c.PropertySourceBootstrapConfiguration] PropertySourceBootstrapConfiguration.java:133 - Located property source: [BootstrapPropertySource {name='bootstrapProperties-easy-es.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-easy-es,DEFAULT_GROUP'}]
+2023-12-22 15:56:35,657 [restartedMain] INFO  [com.xingod.Application] SpringApplication.java:653 - No active profile set, falling back to 1 default profile: "default"
+2023-12-22 15:56:36,143 [restartedMain] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:282 - BeanFactory id=390b8ae2-de18-3f4e-8a79-e9c839c831c5
+2023-12-22 15:56:36,440 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port 8001 (http)
+2023-12-22 15:56:36,446 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:56:36,447 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-12-22 15:56:36,447 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-22 15:56:36,486 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-12-22 15:56:36,486 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 816 ms
+2023-12-22 15:56:36,773 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch jar version:8.10.4
+2023-12-22 15:56:36,774 [restartedMain] ERROR [easy-es] LogUtils.java:78 - Easy-Es supported elasticsearch and restHighLevelClient jar version is:7.14.0 ,Please resolve the dependency conflict!
+2023-12-22 15:56:36,904 [restartedMain] INFO  [easy-es] LogUtils.java:40 - Elasticsearch client version:7.16.2
+2023-12-22 15:56:36,904 [restartedMain] WARN  [easy-es] LogUtils.java:59 - Elasticsearch clientVersion:7.16.2 not equals jarVersion:8.10.4, It does not affect your use, but we still recommend keeping it consistent!
+2023-12-22 15:56:36,946 [restartedMain] INFO  [easy-es] LogUtils.java:30 - ===> manual index mode activated
+2023-12-22 15:56:37,194 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:59 - LiveReload server is running on port 35729
+2023-12-22 15:56:37,239 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8001"]
+2023-12-22 15:56:37,249 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:221 - Tomcat started on port 8001 (http) with context path ''
+2023-12-22 15:56:37,491 [restartedMain] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:76 - nacos registry, DEFAULT_GROUP easy-es 10.45.105.175:8001 register finished
+2023-12-22 15:56:37,502 [restartedMain] INFO  [com.xingod.Application] StartupInfoLogger.java:56 - Started Application in 3.436 seconds (process running for 4.072)
+2023-12-22 15:56:37,512 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es.yml, group=DEFAULT_GROUP
+2023-12-22 15:56:37,513 [restartedMain] INFO  [c.a.cloud.nacos.refresh.NacosContextRefresher] NacosContextRefresher.java:129 - [Nacos Config] Listening config: dataId=easy-es, group=DEFAULT_GROUP
+2023-12-22 15:56:40,611 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:95 - De-registering from Nacos Server now...
+2023-12-22 15:56:40,641 [SpringApplicationShutdownHook] INFO  [c.a.cloud.nacos.registry.NacosServiceRegistry] NacosServiceRegistry.java:115 - De-registration finished.

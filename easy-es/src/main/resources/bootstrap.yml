@@ -1,0 +1,28 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: easy-es
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    allow-bean-definition-overriding: true
+  codec:
+    max-in-memory-size: 2MB
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: true
+    discovery:
+      enabled: true
+    nacos:
+      discovery:
+        server-addr: 192.168.129.36:30048
+        enabled: true
+        namespace: efbab5f0-c8e5-4733-a512-344242850c77
+      config:
+        server-addr: 192.168.129.36:30048
+        file-extension: yml
+        namespace: efbab5f0-c8e5-4733-a512-344242850c77
